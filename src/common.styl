@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+
+
+@import 'nib'
+
+global-reset()
+box-sizing(border-box)
+
+
+body, html
+  color #414042
+  font-family 'Nanum Barun Gothic', sans-serif
+
+#header
+  height 60px
+  padding-top 10px
+  padding-bottom 10px
+  background linear-gradient(to right, #f39eb2 0%,#acdff0 25%,#82c9a6 50%,#fbeb9d 75%,#f8bd91 100%,#f8bd91 100%)
+  #logo
+    margin-left 30px
+    height 60px
+
+  #menu
+    font-family 'Nanum Myeongjo', serif
+    float right
+    margin-right 120px
+    ul
+      li
+        font-size 20px
+        line-height 60px
+        float left
+        margin-left 80px
+
+.jonmat-map
+  margin-right 420px
+  width 100%
+  height 800px
+  float right
+.jonmat-list
+  font-family 'Nanum Barun Gothic', sans-serif;
+  position absolute
+  right 0
+  width 420px
+  height 800px
+  overflow auto
+  ul
+    width 100%
+    overflow hidden
+    li
+      font-size 14px
+      width 100%
+      //border-left 6px solid #F8BD91
+      border-style solid
+      border-left-width 6px
+      .inner
+        clear both
+        overflow hidden
+        padding 18px 10px 18px 10px
+        height 100%
+        border-bottom 1px solid #cccccc
+        position relative
+        .tag
+          position absolute
+          top 18px
+          left 10px
+          font-family 'Nanum Myeongjo', serif
+          background-color #F39EB2
+          width 30px
+          height 30px
+          border-radius 15px
+          line-height 30px
+          text-align center
+          font-size 12px
+          color white
+        .info
+          float left
+          margin-left 40px
+          .shop
+            font-weight bold
+            line-height 22px
+          .address
+            font-size 11px
+            line-height 14px
+            padding-left 10px
+          .who
+            margin-top 14px
+            .name
+              font-weight bold
+          .price
+            margin-top 10px
+        .count
+          float right
+          .num
+            margin-top 10px
+            font-size 42px
+            line-height 70px
+          .h
+            margin-left 6px
+            font-size 14px
+            font-weight bold
