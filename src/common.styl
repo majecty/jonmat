@@ -2,27 +2,31 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
 
-
 @import 'nib'
 
 global-reset()
-box-sizing(border-box)
+*
+  box-sizing border-box
 
-
-body, html
+html, body
   color #414042
   font-family 'Nanum Barun Gothic', sans-serif
 
+html, body, #main, .app
+  height 100%
+
 #header
-  height 60px
+  position fixed
+  z-index 100
+  width 100%
+  height 80px
   padding-top 10px
   padding-bottom 10px
   background linear-gradient(to right, #f39eb2 0%,#acdff0 25%,#82c9a6 50%,#fbeb9d 75%,#f8bd91 100%,#f8bd91 100%)
-  #logo
+  .logo
     margin-left 30px
     height 60px
-
-  #menu
+  .menu
     font-family 'Nanum Myeongjo', serif
     float right
     margin-right 120px
@@ -36,14 +40,24 @@ body, html
 .jonmat-map
   margin-right 420px
   width 100%
-  height 800px
+  height 100%
   float right
+  .jonmat-marker
+    background-color white
+    line-height 30px
+    border-width 2px
+    border-style solid
+    text-align center
+    width 100px
+    border-radius 5px
+
 .jonmat-list
+  padding-top 80px
   font-family 'Nanum Barun Gothic', sans-serif;
   position absolute
   right 0
   width 420px
-  height 800px
+  height 100%
   overflow auto
   ul
     width 100%
@@ -51,7 +65,6 @@ body, html
     li
       font-size 14px
       width 100%
-      //border-left 6px solid #F8BD91
       border-style solid
       border-left-width 6px
       .inner

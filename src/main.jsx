@@ -1,12 +1,9 @@
+import 'common.styl';
 import React from 'react';
 import ReactDOM from 'react-dom'
 import JonmatMap from 'jonmatmap';
 import JonmatList from 'jonmatlist';
 import $ from 'jquery';
-import 'common.styl';
-
-
-let host = 'http://localhost:8008/';
 
 
 class Main extends React.Component {
@@ -14,15 +11,13 @@ class Main extends React.Component {
         super(props);
 
         this.state = {
-            items: [
-                {kind: 'k'},{kind: 'j'},{kind: 'k'},{kind: 'j'},{kind: 'y'},{kind: 'k'},{kind: 'c'},{kind: 'k'},{kind: 'k'},{kind: 'c'},{kind: 'k'},{kind: 'c'}
-            ]
+            items: []
         }
     }
 
     componentDidMount() {
         $.ajax({
-            url: 'http://heechan.me:8000/data/',
+            url: '/api/restaurant.json',
             success: data => {
                 this.setState({
                     items: data['data']
@@ -33,23 +28,19 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="app">
                 <div id="header">
-                    <img id="logo" src="/static/logo.png" />
-                    <div id="menu">
+                    <img className="logo" src="/static/logo.png" />
+                    <div className="menu">
                         <ul>
-                            <li>소속정당</li>
-                            <li>음식종류</li>
+                            {/*<li>소속정당</li>*/}
+                            {/*<li>음식종류</li>*/}
                             <li>방문횟수</li>
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <JonmatMap items={this.state.items} />
-                </div>
-                <div>
-                    <JonmatList items={this.state.items} />
-                </div>
+                <JonmatMap items={this.state.items} />
+                <JonmatList items={this.state.items} />
             </div>
         )
     }
