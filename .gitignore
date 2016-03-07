@@ -1,0 +1,10 @@
+.DS_Store
+env
+node_modules
+.idea
+
+webpack-stats.json
+
+key.json
+index_local.html
+data/*.json
