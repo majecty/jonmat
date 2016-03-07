@@ -31,8 +31,9 @@ export default class JonmatMap extends React.Component {
             }[item.kind];
 
             let icon = L.divIcon({
+                className: 'jonmat-icon',
                 html: `
-                    <div class="jonmat-marker" style="border-color: ${color}">
+                    <div class="jonmat-marker-content" style="border-color: ${color}">
                         ${item.name}
                     </div>
                 `
