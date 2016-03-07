@@ -17,7 +17,7 @@ class Main extends React.Component {
 
     componentDidMount() {
         $.ajax({
-            url: '/api/restaurant.json',
+            url: '/static/build/data/restaurant.json',
             success: data => {
                 this.setState({
                     items: data['data']

@@ -15,7 +15,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.join(__dirname, 'bundles'),
+        path: path.join(__dirname, 'static/build/'),
         filename: '[name].js',
         publicPath: 'http://localhost:' + port + '/static/'
     },
