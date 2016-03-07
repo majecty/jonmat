@@ -17,7 +17,7 @@ class Main extends React.Component {
 
     componentDidMount() {
         $.ajax({
-            url: '/static/build/data/restaurant.json',
+            url: 'static/build/data/restaurant.json',
             success: data => {
                 this.setState({
                     items: data['data']
@@ -30,7 +30,7 @@ class Main extends React.Component {
         return (
             <div className="app">
                 <div id="header">
-                    <img className="logo" src="/static/logo.png" />
+                    <img className="logo" src="static/logo.png" />
                     <div className="menu">
                         <ul>
                             {/*<li>소속정당</li>*/}
