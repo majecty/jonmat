@@ -8,7 +8,8 @@ cred = ServiceAccountCredentials.from_json_keyfile_name('key.json', [
 ])
 google_sheet = gspread.authorize(cred)
 
-doc = google_sheet.open_by_key('1QCjbjgUOLRZzFpO3HqN-kwqX-2Iu_plJlHL-64PcKTY')
+# doc = google_sheet.open_by_key('1QCjbjgUOLRZzFpO3HqN-kwqX-2Iu_plJlHL-64PcKTY')
+doc = google_sheet.open_by_key('1jvMgRCkWwnepc-Y25piFbWkYVn0gf81grfZbZuuk5Nc')
 sheet = doc.worksheet('DEV')
 
 data = []
