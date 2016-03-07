@@ -1,30 +1,24 @@
 var path = require('path');
 var webpack = require('webpack');
 var BundleTracker = require('webpack-bundle-tracker');
-var port = 8008;
 
 
 module.exports = {
-    port: port,
     devtool: 'source-map',
     entry: {
         main: [
-            'webpack-dev-server/client?http://0.0.0.0:' + port,
-            'webpack/hot/only-dev-server',
             'main'
         ]
     },
     output: {
         path: path.join(__dirname, 'static/build/'),
         filename: '[name].js',
-        publicPath: 'http://localhost:' + port + '/static/'
+        publicPath: 'http://codeforseoul.github.io/jonmat/static/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
         new BundleTracker(),
         new webpack.DefinePlugin({
-            __CONFIG__: JSON.stringify('debug')
+            __CONFIG__: JSON.stringify('product')
         })
     ],
     resolve: {
