@@ -39,8 +39,12 @@ class Main extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <JonmatMap items={this.state.items} />
-                <JonmatList items={this.state.items} />
+                <div className="jonmat-map-container">
+                    <JonmatMap items={this.state.items} />
+                </div>
+                <div className="jonmat-list-container">
+                    <JonmatList items={this.state.items} />
+                </div>
             </div>
         )
     }

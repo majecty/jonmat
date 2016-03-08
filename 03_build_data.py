@@ -15,12 +15,14 @@ restaurants = []
 eats = []
 
 for man_name, party, restaurant_name, address, kind, price, memo in data:
-    location = geocodes.get(address, None)
-    if location:
+    if address in geocodes:
         location = {
-            'lat': location[0],
-            'lng': location[1],
+            'lat': geocodes[address]['lat'],
+            'lng': geocodes[address]['lng'],
         }
+    else:
+        location = None
+
     man = CongressMan(man_name, party)
     restaurant = Restaurant(restaurant_name, kind, address, location)
 
@@ -61,4 +63,4 @@ restaurant_loves_by_congressman = [
 ]
 print(restaurant_loves_by_congressman)
 
-json.dump({'data': restaurant_loves_by_congressman}, open('api/restaurant.json', 'w+'))
+json.dump({'data': restaurant_loves_by_congressman}, open('static/build/data/restaurant.json', 'w+'))
