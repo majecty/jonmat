@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import JonmatMap from 'jonmatmap';
 import JonmatList from 'jonmatlist';
+import JonmatGoogleMap from 'jonmatGoogleMap';
 import $ from 'jquery';
 
 
@@ -26,6 +27,7 @@ class Main extends React.Component {
         })
     }
 
+                    // { <JonmatMap items={this.state.items} /> }
     render() {
         return (
             <div className="app">
@@ -39,11 +41,11 @@ class Main extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <div className="jonmat-map-container">
-                    <JonmatMap items={this.state.items} />
-                </div>
                 <div className="jonmat-list-container">
                     <JonmatList items={this.state.items} />
+                </div>
+                <div className="jonmat-map-container">
+                    <JonmatGoogleMap items={this.state.items} />
                 </div>
             </div>
         )
