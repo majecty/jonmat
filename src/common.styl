@@ -1,9 +1,15 @@
+// Import Fonts
 @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
 
+// CSS3 Extension for stylus (http://tj.github.io/nib/)
 @import 'nib'
 
+// Variables
+header-height = 80px
+
+// Styles
 global-reset()
 *
   box-sizing border-box
@@ -19,7 +25,7 @@ html, body, #main, .app
   position fixed
   z-index 100
   width 100%
-  height 80px
+  height header-height
   padding-top 10px
   padding-bottom 10px
   background linear-gradient(to right, #f39eb2 0%,#acdff0 25%,#82c9a6 50%,#fbeb9d 75%,#f8bd91 100%,#f8bd91 100%)
@@ -38,8 +44,11 @@ html, body, #main, .app
         margin-left 80px
 
 .jonmat-map-container
-  width 100%
+  padding-top header-height
+  // width 100%
   height 100%
+  width auto
+  overflow hidden
   .jonmat-map
     width 100%
     height 100%
@@ -53,17 +62,14 @@ html, body, #main, .app
       border-radius 5px
 
 .jonmat-list-container
-  position absolute
-  top 0
-  right 0
+  padding-top header-height
+  float right
   height 100%
   width 420px
   background-color white
 
 .jonmat-list
-  padding-top 80px
   font-family 'Nanum Barun Gothic', sans-serif;
-  position absolute
   right 0
   width 420px
   height 100%
