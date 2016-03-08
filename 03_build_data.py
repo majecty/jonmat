@@ -63,4 +63,4 @@ restaurant_loves_by_congressman = [
 ]
 print(restaurant_loves_by_congressman)
 
-json.dump({'data': restaurant_loves_by_congressman}, open('api/restaurant.json', 'w+'))
+json.dump({'data': restaurant_loves_by_congressman}, open('static/build/data/restaurant.json', 'w+'))
