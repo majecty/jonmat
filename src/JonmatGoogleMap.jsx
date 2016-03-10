@@ -5,18 +5,18 @@ import {default as MarkerClusterer} from 'react-google-maps/lib/addons/MarkerClu
 
 export default class JonmatGoogleMap extends React.Component {
 	constructor(props) {
-    super(props);
+	    super(props);
 
-    this.state = {
-        items: []
-    }
-  }
+    	this.state = {
+        	items: []
+    	};
+  	}
 
-  componentWillReceiveProps(props) {
-      this.setState({
-          items: props.items
-      });
-  }
+  	componentWillReceiveProps(props) {
+      	this.setState({
+			items: props.items
+      	});
+  	}
 
 	render() {
 		const {items} = this.state;
@@ -24,24 +24,19 @@ export default class JonmatGoogleMap extends React.Component {
 		return (
 			<div className="jonmat-map">
 				<GoogleMapLoader
-		      containerElement={ <div style={{height: '100%'}} /> }
-		      googleMapElement={
-		        <GoogleMap defaultZoom={15} defaultCenter={{lat: 37.5207598, lng: 126.9209653}}>
-		        	<MarkerClusterer
-			          averageCenter
-			          enableRetinaIcons
-			          gridSize={60}
-			        >
-				        {items.map((marker, i) => (
-			            <Marker
-			              position={{lat: marker.location.lat, lng: marker.location.lng}}
-			              key={i}
-			            />
-			          ))}
-			       </MarkerClusterer>
-		        </GoogleMap>
-		      }
-		    />
+				containerElement={<div style={{height: '100%'}} />}
+				googleMapElement={
+					<GoogleMap defaultZoom={15} defaultCenter={{lat: 37.5207598, lng: 126.9209653}}>
+			        	<MarkerClusterer averageCenter enableRetinaIcons gridSize={60}>
+							{items.map((marker, i) => (
+				            	<Marker
+				              	position={{lat: marker.location.lat, lng: marker.location.lng}}
+				              	key={i} />
+				          	))}
+				       </MarkerClusterer>
+		        	</GoogleMap>
+		      		}
+		    	/>
 			</div>
 		);
 	}

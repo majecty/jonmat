@@ -27,7 +27,6 @@ class Main extends React.Component {
         })
     }
 
-                    // { <JonmatMap items={this.state.items} /> }
     render() {
         return (
             <div className="app">
