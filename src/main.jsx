@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import JonmatMap from 'jonmatmap';
 import JonmatList from 'jonmatlist';
-import $ from 'jquery';
 
 
 class Main extends React.Component {
@@ -16,25 +15,23 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        $.ajax({
-            url: '//codeforseoul.org/jonmat/static/build/data/restaurant.json',
-            success: data => {
-                this.setState({
-                    items: data['data']
-                })
-            }
-        })
+		fetch('https://nullfull.github.io/jonmat/static/build/data/restaurant.json')
+			.then(response => {
+				return response.json()
+			}).then(data => {
+				this.setState({
+					items: data.data
+				})
+			});
     }
 
     render() {
         return (
             <div className="app">
                 <div id="header">
-                    <img className="logo" src="//codeforseoul.org/jonmat/static/logo.png" />
+                    <img className="logo" src="static/logo.png" />
                     <div className="menu">
                         <ul>
-                            {/*<li>소속정당</li>*/}
-                            {/*<li>음식종류</li>*/}
                             <li>방문횟수</li>
                         </ul>
                     </div>

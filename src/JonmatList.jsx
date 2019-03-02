@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Humanize from 'humanize-plus';
 
 
@@ -29,7 +28,6 @@ class JonmatListItem extends React.Component {
                     <div className="info">
                         <div className="shop">{item.name}</div>
                         <div className="address">{item.address}</div>
-                        {/* <div className="who"><span className="name">김무성</span><span> | </span><span>새누리당</span></div> */}
                         <div className="price">{Humanize.intComma(item.totalPrice)}원</div>
                     </div>
                     <div className="count">
