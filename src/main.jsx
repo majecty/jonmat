@@ -15,7 +15,7 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-		fetch('https://nullfull.github.io/jonmat/static/build/data/restaurant.json')
+		fetch('static/build/data/restaurant.json')
 			.then(response => {
 				return response.json()
 			}).then(data => {
