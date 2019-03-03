@@ -62,7 +62,7 @@ export default class JonmatMap extends React.Component {
 
         this.map.addControl(zoom);
 
-        let tile = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
+        let tile = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
             minZoom: 0,
             maxZoom: 20,
             //detectRetina: true,
