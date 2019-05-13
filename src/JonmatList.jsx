@@ -24,7 +24,7 @@ class JonmatListItem extends React.Component {
                 <div className="inner">
                     <div className="tag" style={{
                         backgroundColor: color
-                    }}>{item.kind}</div>
+                    }}></div>
                     <div className="info">
                         <div className="shop">{item.name}</div>
                         <div className="address">{item.address}</div>
