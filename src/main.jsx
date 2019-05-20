@@ -31,9 +31,8 @@ class Main extends React.Component {
                 <div id="header">
                     <img className="logo" src="static/logo.png" />
                     <div className="menu">
-                        <p>2018년 후원금 사용 금액 상위 6명의 데이터</p>
-						<p><a href="https://www.notion.so/Jonmat-8f61b408288d4776b45c1027ae7b4696">데이터 추가하시려면 여기로</a></p>
-						<p><a href="https://docs.google.com/document/u/4/d/e/2PACX-1vQAkut1TTnFA7rJci2o5DvZOsMp-OSKdkh9ibFNM65ypoXEoLQSeWgaTW-0Zzv-OjQWLlB8T6cit5NE/pub">음식점 리뷰는 여기로</a></p>
+						<p><a href="https://www.notion.so/Jonmat-8f61b408288d4776b45c1027ae7b4696">데이터 추가</a></p>
+						<p><a href="https://docs.google.com/document/u/4/d/e/2PACX-1vQAkut1TTnFA7rJci2o5DvZOsMp-OSKdkh9ibFNM65ypoXEoLQSeWgaTW-0Zzv-OjQWLlB8T6cit5NE/pub">음식점 리뷰</a></p>
                     </div>
                 </div>
                 <div className="jonmat-list-container">
@@ -42,6 +41,9 @@ class Main extends React.Component {
                 <div className="jonmat-map-container">
                     <JonmatMap items={this.state.items} />
                 </div>
+				<div id="footer">
+					<p className="stats"><a href="https://www.notion.so/Jonmat-8f61b408288d4776b45c1027ae7b4696">2018년 후원금 사용 금액 상위 6명의 데이터</a></p>
+				</div>
             </div>
         )
     }
