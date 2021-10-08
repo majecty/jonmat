@@ -47,3 +47,11 @@ jonmatenv 디렉토리에 저장됩니다.
 ```sh
 . jonmatenv/bin/activate
 ```
+
+#### 필요한 라이브러리 설치
+
+다음 명령어를 실행하여 python 스크립트가 사용할 라이브러리들을 설치합니다.
+
+```sh
+pip3 install -r ./requirements.txt
+```
