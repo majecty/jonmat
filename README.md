@@ -55,3 +55,20 @@ jonmatenv 디렉토리에 저장됩니다.
 ```sh
 pip3 install -r ./requirements.txt
 ```
+
+### python 스크립트 실행하기
+
+#### 01_get_data 실행
+
+01_get_data.py 스크립트는 구글 시트에서 정보를 읽어서 data/data.json에 저장합니다.
+
+google spreadsheet API를 호출하려면 API key 파일이 필요합니다.
+
+[이 문서](https://developers.google.com/admin-sdk/directory/v1/guides/delegation#create_the_service_account_and_credentials)를 참고하여 json 형태의 키 파일을 생성합니다.
+키 파일은 프로젝트 루트 폴더에 key.json 이름으로 저장해 주세요.
+
+다음 커맨드로 스크립트를 실행합니다.
+
+```sh
+python3 ./01_get_data.py
+```
