@@ -16,3 +16,34 @@ https://www.notion.so/Jonmat-8f61b408288d4776b45c1027ae7b4696
   - [ ] 작성된 파일을 웹사이트에 반영
 - [ ] 구글시트를 수정하면 웹사이트에 자동반영 되도록 cron/action 작성 필요
 - [ ] 음식점 종류 수동입력 필요
+
+## 프로젝트 로컬에서 실행시키기
+
+### Python 환경 설정하기
+
+#### virtualenv 설정
+
+프로젝트 별로 파이썬 환경을 격리하면 예상치 못하게 라이브러리가 꼬이는 문제를 예방할 수 있습니다.
+
+1. virtualenv를 설치합니다.
+
+이 [링크](https://virtualenv.pypa.io/en/latest/)를 참고해서 설치합니다.
+
+2. virtual env 환경을 만듭니다.
+
+터미널에서 프로젝트의 루트 디렉토리로 이동하여 다음 명령어를 실행합니다.
+
+```sh
+virtualenv jonmatenv
+```
+
+3. virtualenv를 activate합니다.
+
+virtualenv를 activate를 하면 앞으로 설치하는 모든 python 라이브러리가
+jonmatenv 디렉토리에 저장됩니다.
+
+프로젝트 루트 디렉토리에서 다음 명령어를 실행합니다.
+
+```sh
+. jonmatenv/bin/activate
+```
