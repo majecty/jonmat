@@ -8,8 +8,8 @@ cred = ServiceAccountCredentials.from_json_keyfile_name('key.json', [
 ])
 google_sheet = gspread.authorize(cred)
 
-doc = google_sheet.open_by_key('1jvMgRCkWwnepc-Y25piFbWkYVn0gf81grfZbZuuk5Nc')
-sheet = doc.worksheet('DEV')
+doc = google_sheet.open_by_key('1vjCUzjeNxnNZ-ZaaNLM4fx2n_ephZDjpJSSvJGUVm0U')
+sheet = doc.worksheet('jonmat2017')
 
 data = []
 for man_name, party, restaurant_name, address, kind, price_str, memo in sheet.get_all_values()[1:]:
