@@ -72,3 +72,15 @@ google spreadsheet API를 호출하려면 API key 파일이 필요합니다.
 ```sh
 python3 ./01_get_data.py
 ```
+
+### 02_get_geocodes.py 실행
+
+02_get_geocodes.py 스크립트는 data/data.json에 있는 주소의 위경도 졍보를 data/geocodes.json파일에 저장합니다.
+
+Google Geocoding API를 사용하려면 API key가 필요합니다. [이 문서](https://developers.google.com/maps/documentation/geocoding/get-api-key)를 참고하여 key를 얻은 뒤 02_get_geocodes.py 파일 안에 key 변수에 저장합니다.
+
+다음 커맨드로 스크립트를 실행합니다.
+
+```sh
+python3 ./02_get_geocodes.py
+```

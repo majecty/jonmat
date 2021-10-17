@@ -1,11 +1,13 @@
 import json
 import requests
 
+# get key from https://developers.google.com/maps/documentation/geocoding/get-api-key
+key = ""
 
 def geocode(address):
     print(address)
 
-    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json', params=dict(address=address))
+    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json', params=dict(address=address, key=key))
     results = response.json()['results']
 
     if len(results) < 1:
