@@ -8,3 +8,5 @@ webpack-stats.json
 key.json
 index_local.html
 data/*.json
+
+.vercel
